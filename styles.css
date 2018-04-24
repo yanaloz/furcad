@@ -1,0 +1,233 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;                               /* обнуляем отступы и убираем бордюры */
+    vertical-align: baseline;          /* приводим все к одной базовой линии */
+    background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+    font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, td img {
+    vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+}
+input, select, button, textarea {
+    margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+    font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+    outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+    padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+    vertical-align: bottom;
+}
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+    min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+    color: #404040;
+    background: #f9f9f9;
+    text-align: left;
+    font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+    min-height:100%;
+    font-family: 'Open Sans', sans-serif;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+    color: #e6618c;
+    text-decoration: underline;
+}
+a:hover {
+    color: #fdf208;
+    text-decoration:none;
+}
+a:focus, a:active {
+    color: #c83867;
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight:normal;
+}
+img{
+
+    max-width:100%;
+}
+.clr{
+    clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+header {
+    background: url("images/header.jpg") right no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: left;
+    padding: 20px 20px 100px 20px;
+}
+
+header > h1 {
+    font-size: 3em;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+header > h3 {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    font-style: italic;
+    font-weight: 500;
+}
+article {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+article > h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+article > p {
+    margin: 0 0 50px 370px;
+}
+
+.imgleft {
+    float: left;
+}
+footer {
+    background-color: #000;
+    overflow: auto;
+}
+.subscribe > p {
+    color: #fff;
+    text-align: left;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.network > p {
+    color: #fff;
+    text-align: left;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+form {color: #f9f9f9;
+    text-align: center;
+    background-color: rgb(104, 104, 104);
+    display: table;
+    padding: 5px;
+    border-radius: 5px;
+}
+i{
+    color: #fff;
+    font-family: fontawesome;
+    font-style: normal;
+    margin: 10px;
+}
+.footer_wrapper {
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.subscribe {
+    margin-left: 10px;
+}
+.network {
+    margin-right: 10px;
+}
+.network > span{
+    display: block;
+    font-size: 1em;
+    margin: 30px 0 0 50px;
+}
+.subscribe input[type="text"], .subscribe input[type="email"]  {
+    padding: 5px;
+    margin-right: 5px;
+    width: 300px;
+}
+.subscribe input[type="submit"]{
+    padding: 5px;
+    cursor: pointer;
+}
+@media screen and (max-width: 950px){
+    .subscribe input[type="text"], .subscribe input[type="email"]  {
+        width: 200px
+    }
+}
+@media screen and (max-width: 746px){
+    .subscribe input[type="text"], .subscribe input[type="email"]  {
+        width: 250px;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    header {
+        padding: 10px 20px;
+    }
+    header > h1 {
+        font-size: 2.5em;
+        font-family: "Raleway", sans-serif;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    header > h3 {
+        font-size: 1em;
+        margin-bottom: 50px;
+        font-style: italic;
+    }
+}
+@media screen and (max-width: 632px) {
+    .subscribe input[type="text"], .subscribe input[type="email"]  {
+        width: 180px;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .imgleft {
+        float: none;
+    }
+    article > p {
+        margin: 0 0 20px 20px;
+    }
+    .network > span{
+        margin: 30px 0 0 20px;
+    }
+}
